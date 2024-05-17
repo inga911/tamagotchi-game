@@ -39,6 +39,7 @@ body {
   border: 1px solid black;
   height: 500px;
   width: 500px;
+  background: azure;
 }
 .main-game .header {
   padding: 15px;
@@ -78,20 +79,21 @@ body {
 }
 .main-game .bottom {
   height: 80px;
-  background-color: lightgreen;
+  background-color: #659565;
   position: relative;
 }
 .main-game .bottom .your-animal {
   height: 100px;
   width: 100px;
   position: absolute;
-  top: -70px;
-  font-size: 70px;
-  animation: moveAnimal 15s infinite linear;
 }
 
 .d-none {
   display: none;
+}
+
+.animation-move {
+  animation: moveAnimal 15s infinite linear;
 }
 
 @keyframes moveAnimal {
