@@ -23,15 +23,119 @@ body {
             padding: 15px;
 
             .animal-box {
-                border: 1px solid rgb(128, 128, 128);
+                border: 1px solid rgba(9, 9, 9, 0.124);
                 width: 100px;
                 height: 100px;
                 font-size: 70px;
                 text-align: center;
+                filter: brightness(80%);
+                transition: all 0.2s;
+
+                &:hover {
+                    cursor: pointer;
+                    border: 1px solid rgb(0, 0, 0);
+                    filter: brightness(95%);
+                }
             }
 
 
         }
 
     }
+}
+
+.main-game {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+
+
+    .header {
+        padding: 15px;
+
+        .header-bars {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .outbox {
+            width: 30%;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .txt {
+                font-size: 12px;
+                text-align: center;
+            }
+
+            .box {
+                border: 1px solid black;
+                height: 25px;
+
+                .box-color {
+                    // width: 30%;
+                    height: 100%;
+                    // background-color: antiquewhite;
+
+                }
+            }
+
+            button {
+                border: none;
+                background-color: transparent;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.233);
+                color: rgba(0, 0, 0, 0.233);
+                transition: all 0.1s;
+
+                &:hover {
+                    color: black;
+                    border-bottom: 1px solid rgb(0, 0, 0);
+                }
+            }
+        }
+
+
+    }
+
+    .bottom {
+        height: 80px;
+        background-color: lightgreen;
+        position: relative;
+
+        .your-animal {
+            height: 100px;
+            width: 100px;
+            // border: 1px solid rgba(0, 0, 0, 0.254);
+            position: absolute;
+            top: -70px;
+            font-size: 70px;
+            animation: moveAnimal 15s infinite linear;
+        }
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+
+@keyframes moveAnimal {
+    0% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(180px);
+    }
+
+    80% {
+        transform: translateX(-180px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
 }
