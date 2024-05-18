@@ -45,7 +45,7 @@ body {
     border: 1px solid black;
     height: 500px;
     width: 500px;
-    background: azure;
+    background: #f0ffff;
 
     .header {
         padding: 15px;
@@ -110,6 +110,19 @@ body {
 
 .animation-move {
     animation: moveAnimal 15s infinite linear;
+}
+
+.disable {
+    pointer-events: none;
+    filter: brightness(110%);
+}
+
+.nightbg {
+    background-color: #004ab9;
+}
+
+.button-nigth {
+    color: yellow !important;
 }
 
 
