@@ -168,7 +168,7 @@ updateProgressBar(funLevel, funAmountProgressBar, funAmountHTML);
 updateProgressBar(sleepLevel, sleepLevelProgressBar, sleepLevelHTML);
 // Health
 function healthPoints(hungry, fun, sleep) {
-    hpLevel -= 0.005;
+    hpLevel -= 0.05;
     updateProgressBar(hpLevel, healthPointsProgressBar, healthPointsHTML);
     if (hungry === 0 && fun === 0 && sleep === 0) {
         hpLevel = 0;
