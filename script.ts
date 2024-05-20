@@ -78,12 +78,12 @@ animalBoxes.forEach(a => {
                 if (pos > 275) pos = 0
             } else if (selectedAnimal === 'images/dog.png') {
                 spriteDiv.style.backgroundImage = 'url("https://codehs.com/uploads/31053db3e99402272fc99cfaba698b88")';
-                spriteDiv.style.width = '95px'
+                spriteDiv.style.width = '98px'
                 spriteDiv.style.height = '100px'
-                spriteDiv.style.backgroundSize = '300px'
+                spriteDiv.style.backgroundSize = '295px'
                 spriteDiv.style.backgroundPosition = `-${pos}px 0`
-                pos += 95
-                if (pos > 297) pos = 0
+                pos += 175
+                if (pos > 345) pos = 0
             }
 
         }, 200)
@@ -292,4 +292,3 @@ playAgainBtn.onclick = () => {
     start.classList.remove('d-none')
     location.reload()
 }
-
