@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body class="d-flex flex-column justify-content-center align-items-center">
+  <body class="d-flex justify-content-center align-items-center gap-4">
     <div class="start">
       <div class="start-title text-center p-3">Select Your animal</div>
       <div class="start-box">
@@ -26,7 +26,6 @@
     <div class="main">
       <div class="d-flex justify-content-center gap-4">
         <div class="level-box text-center"></div>
-        <div class="life-timer"></div>
       </div>
       <div class="main-game d-flex flex-column justify-content-between">
         <div class="header d-flex flex-column">
@@ -64,12 +63,26 @@
             </div>
           </div>
         </div>
+        <div class="sun">
+          <img
+            class="sun-img"
+            src="https://cdn.iconscout.com/icon/free/png-256/free-sun-631-445578.png?f=webp"
+            alt=""
+          />
+        </div>
+        <div class="night-text">
+          ✨ Night time ends in<span class="night-time"></span>
+        </div>
         <div class="bottom d-flex justify-content-center">
           <div class="your-animal">
             <div class="sprite"></div>
           </div>
         </div>
       </div>
+    </div>
+    <div>
+      <div class="fun-points"></div>
+      <div class="game-box"></div>
     </div>
 
     <div class="results">
