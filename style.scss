@@ -14,27 +14,30 @@ body {
         height: 500px;
         width: 500px;
         border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .select-animal {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            justify-items: center;
-            padding: 15px;
+            display: flex;
+
 
             .animal-box {
                 border: 1px solid rgba(9, 9, 9, 0.124);
-                width: 100px;
-                height: 100px;
                 font-size: 70px;
                 text-align: center;
                 filter: brightness(80%);
                 transition: all 0.2s;
+                padding: 15px;
 
                 &:hover {
                     cursor: pointer;
                     border: 1px solid rgb(0, 0, 0);
                     filter: brightness(95%);
+                }
+
+                .animal-image {
+                    width: 100px;
                 }
             }
         }
@@ -128,19 +131,50 @@ body {
 
 @keyframes moveAnimal {
     0% {
-        transform: translateX(0);
+        transform: translateX(0) scaleX(1);
     }
 
     40% {
-        transform: translateX(180px);
+        transform: translateX(180px) scaleX(1);
+    }
+
+    41% {
+        transform: translateX(180px) scaleX(-1);
     }
 
     80% {
-        transform: translateX(-180px);
+        transform: translateX(-180px) scaleX(-1);
+    }
+
+    81% {
+        transform: translateX(-180px) scaleX(1);
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateX(0) scaleX(1);
     }
+}
 
+
+
+
+.results {
+    .result-box {
+        height: 500px;
+        width: 500px;
+        border: 1px solid black;
+
+        .play-again-btn {
+            background: transparent;
+            border: 1px solid lightgrey;
+            color: grey;
+            padding: 5px 15px;
+            transition: all 0.1s;
+
+            &:hover {
+                color: black;
+                border-color: black;
+            }
+        }
+    }
 }
